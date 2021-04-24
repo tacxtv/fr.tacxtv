@@ -9,7 +9,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   router: {
-    // base: '/tacxtv.fr/'
+    base: '/tacxtv.fr/'
   },
 
   srcDir: 'src/',
