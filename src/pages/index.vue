@@ -1,7 +1,6 @@
 <template lang="pug">
-  twitch-player(
-    channel="TacxTV"
-  )
+  div(style="height: 100%")
+    twitch-player(channel="TacxTV")
 </template>
 
 <script>
