@@ -2,7 +2,9 @@
   v-app(:style="appStyle")
     v-main.h-screen
       v-app-bar(
-        dense dark color="#54A09F" fade-img-on-scroll prominent app fixed hide-on-scroll shrink-on-scroll
+        dense dark color="#54A09F" fade-img-on-scroll app fixed hide-on-scroll
+      :shrink-on-scroll="!$vuetify.breakpoint.smAndDown"
+      :prominent="!$vuetify.breakpoint.smAndDown"
       :src="require('~/assets/img/background.png')"
       )
         v-toolbar.pa-1(absolute dense flat style="right: 0" color="transparent")
@@ -16,20 +18,21 @@
           v-fade-transition
             v-btn(v-show="isIntersect" href="https://discord.gg/NURBhQhY3f" target="_blank" color="white" height="32" width="32" icon)
               v-icon mdi-chat
-        v-img.my-1(v-show="isIntersect" :src="require('~/assets/img/tacx.png')" height="80%" contain)
+        v-img.my-1(v-if="!$vuetify.breakpoint.smAndDown" v-show="isIntersect" :src="require('~/assets/img/tacx.png')" height="80%" contain)
         template(#img="{ props }")
           v-img(v-bind="props" gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)" aspect-ratio="1.7" )
         template(#extension)
           v-expand-transition
             img.hidden-sm-and-down.py-1(v-show="!isIntersect" :src="require('~/assets/img/tacx.png')" height="48")
           v-tabs(centered show-arrows optional)
-            v-tab.white--text(to="/") Stream
+            v-tab.white--text(to="/") Accueil
+            v-tab.white--text(to="/stream") Stream
             v-tab.white--text(href="https://www.twitch.tv/tacxtv/videos" target="_blank") Rediffusions
             v-tab.white--text(href="https://www.twitch.tv/tacxtv/schedule" target="_blank") Planning
             //v-tab.white--text(to="/experiences") Nos expériences
             //v-tab.white--text(to="/creations") Nos créations
             //v-tab.white--text(to="/team") LA Team
-      v-container(fluid :style="{height: 'calc(100% - 48px)'}")
+      v-container(:style="{height: 'calc(100% - 48px)'}")
         nuxt
 </template>
 

@@ -1,5 +1,6 @@
 <template lang="pug">
-  span Accueil
+  div(style="height: 100%")
+    twitch-player(channel="TacxTV")
 </template>
 
 <script>
@@ -7,8 +8,5 @@
 // noinspection JSUnusedGlobalSymbols
 export default {
   name: 'IndexPage',
-  middleware: (context) => {
-    context.redirect('/stream')
-  },
 }
 </script>
