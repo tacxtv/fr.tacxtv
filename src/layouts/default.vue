@@ -17,7 +17,7 @@
               v-icon mdi-youtube
           v-fade-transition
             v-btn(v-show="isIntersect" href="https://discord.gg/NURBhQhY3f" target="_blank" color="white" height="32" width="32" icon)
-              v-icon mdi-chat
+              img(src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/62595384f934b806f37f4956_145dc557845548a36a82337912ca3ac5.svg" style="height: 18px;")
         v-img.my-1(v-if="!$vuetify.breakpoint.smAndDown" v-show="isIntersect" :src="require('~/assets/img/tacx.png')" height="80%" contain)
         template(#img="{ props }")
           v-img(v-bind="props" gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)" aspect-ratio="1.7" )
@@ -28,8 +28,8 @@
             v-tab.white--text(to="/") Accueil
             v-tab.white--text(to="/stream") Stream
             v-tab.white--text(href="https://www.twitch.tv/tacxtv/videos" target="_blank") Rediffusions
-            v-tab.white--text(href="https://www.twitch.tv/tacxtv/schedule" target="_blank") Planning
-            //v-tab.white--text(to="/experiences") Nos expériences
+            v-tab.white--text(to="/planning") Planning
+            v-tab.white--text(to="/experiences") Nos expériences
             //v-tab.white--text(to="/creations") Nos créations
             //v-tab.white--text(to="/team") LA Team
       v-container(:style="{height: 'calc(100% - 48px)'}")
