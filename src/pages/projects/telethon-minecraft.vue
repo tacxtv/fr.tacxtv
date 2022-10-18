@@ -25,7 +25,7 @@ export default {
       autre: '',
       message: '',
     },
-    streamers: ['TacxTV'],
+    streamers: ['Autre', 'TacxTV'],
   }),
   methods: {
     async send() {
