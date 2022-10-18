@@ -1,6 +1,6 @@
 <template lang="pug">
   v-timeline(:dense="$vuetify.breakpoint.smAndDown")
-    v-timeline-item(v-for="(year, i) in years.reverse()" :key="i" :color="year.color")
+    v-timeline-item(v-for="(year, i) in getyears" :key="i" :color="year.color")
       template(#icon)
         v-icon(small v-text="year.icon || 'mdi-home'")
       template(#opposite)
@@ -32,6 +32,11 @@
 // noinspection JSUnusedGlobalSymbols
 export default {
   name: 'IndexPage',
+  computed: {
+    getyears() {
+      return this.years.reverse()
+    }
+  },
   data: () => ({
     years: [
       {
