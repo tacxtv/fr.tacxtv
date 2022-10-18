@@ -29,7 +29,7 @@
             v-tab.white--text(to="/stream") Stream
             v-tab.white--text(href="https://www.twitch.tv/tacxtv/videos" target="_blank") Rediffusions
             v-tab.white--text(to="/planning") Planning
-            v-tab.white--text(to="/experiences") Nos expériences
+            v-tab.white--text(href="/experiences") Nos expériences
             //v-tab.white--text(to="/creations") Nos créations
             //v-tab.white--text(to="/team") LA Team
       v-container(:style="{height: 'calc(100% - 48px)'}")
