@@ -8,6 +8,7 @@
     v-form(ref="form" v-model="valid" lazy-validation)
       v-text-field(v-model="form.name" label="Pseudo twitch" :rules="[v => !!v || 'requis !']" outlined)
       v-select(v-model="form.streamer" label="Votre streamer" :rules="[v => !!v || 'requis !']" :items="streamers" outlined)
+      v-text-field(v-model="form.minecraft" label="Pseudo Minecraft" :rules="[v => !!v || 'requis !']" outlined)
       v-toolbar(color='transparent' flat dense)
         v-spacer
         v-btn(@click="send" text) S'inscrire
@@ -23,7 +24,7 @@ export default {
       name: '',
       streamer: '',
       autre: '',
-      message: '',
+      minecraft: '',
     },
     streamers: ['Autre', 'TacxTV'],
   }),
@@ -68,6 +69,11 @@ export default {
                 {
                   "name": "Streamer",
                   "value": this.form.streamer,
+                  "inline": true
+                },
+                {
+                  "name": "Minecraft",
+                  "value": this.form.minecraft,
                   "inline": true
                 },
               ]
