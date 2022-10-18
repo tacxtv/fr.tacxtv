@@ -46,7 +46,7 @@ export default {
         }
 
         const request = new XMLHttpRequest()
-        request.open("POST", this.$config.DISCORD_WEBHOOK_PROJECT)
+        request.open("POST", 'https://discord.com/api/webhooks/1031854369714491392/pkWpOAXRfEnnOQekM1vmDIE3ISiopukrmgJvy2NMwWVSg-KjtZkyHWKc84TO04Hrhj1i')
         request.setRequestHeader('Content-type', 'application/json')
         request.send(JSON.stringify({
           username: "fr.tacxtv/projects/telethon-minecraft",
