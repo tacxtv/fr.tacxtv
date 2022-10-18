@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    v-img.my-4(src="https://cdn.discordapp.com/attachments/829521148974596148/1031871913921884210/unknown.png")
+    v-img.my-4(src="https://cdn.discordapp.com/attachments/829521148974596148/1031871913921884210/unknown.png" max-width="300px" )
     h2 Hello l’ami,
     div Tu es sur la page d'inscription au projet Télécraft, un projet Minecraft pour l’évènement caritatif du Téléthon Gaming auquel nous participons les 11, 12 et 13 novembre sur la chaîne. Nous avons eu l’idée de créer un serveur Minecraft créatif vanilla disponible à tous pendant les 3 jours de l’évènement afin de créer des constructions, dans le thème ou non de l'événement. Nous te contactons pour savoir si le projet te hype et si tu serais tenté d’y participer ? Plus on est de fou plus on a de constructions, non ?
     br
