@@ -8,5 +8,6 @@
 // noinspection JSUnusedGlobalSymbols
 export default {
   name: 'IndexPage',
+  layout: 'simple',
 }
 </script>

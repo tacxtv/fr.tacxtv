@@ -1,8 +1,8 @@
 <template lang="pug">
   v-app(:style="appStyle")
-    v-main.h-screen
+    v-main.h-screen(style="background: black;")
       navbar
-      v-container(:style="{height: 'calc(100% - 48px)'}")
+      v-container.pa-0(:style="{overflowY: 'hidden', height: '100%'}" fluid)
         nuxt
 </template>
 

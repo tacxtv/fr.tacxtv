@@ -25,8 +25,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - tacxtv.fr',
-    title: 'tacxtv.fr',
+    titleTemplate: 'TacxTV - %s',
+    title: 'TacxTV',
     htmlAttrs: {
       lang: 'fr'
     },

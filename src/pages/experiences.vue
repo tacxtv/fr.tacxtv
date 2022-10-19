@@ -1,14 +1,14 @@
 <template lang="pug">
   v-timeline(:dense="$vuetify.breakpoint.smAndDown")
-    v-timeline-item(v-for="(year, i) in getyears" :key="i" :color="year.color")
+    v-timeline-item(v-for="(experience, i) in getExperiences" :key="i" :color="experience.color")
       template(#icon)
-        v-icon(small v-text="year.icon || 'mdi-home'")
+        v-icon(v-text="experience.icon || 'mdi-home'")
       template(#opposite)
-        span(:class="`headline font-weight-bold ${year.color}--text`" v-text="year.year")
+        span(:class="`headline font-weight-bold ${experience.color}--text`" v-text="experience.year")
       .py-4
-        h2.text-center(:class="`headline font-weight-light mb-4 ${year.color}--text`" v-text="year.title")
+        h2.text-center(:class="`headline font-weight-light mb-4 ${experience.color}--text`" v-text="experience.title")
         v-card.mx-auto
-          v-tabs(vertical)
+          v-tabs(:color="experience.color" vertical)
             v-tab(style="min-width: initial")
               v-icon mdi-text
             //v-tab(style="min-width: initial")
@@ -16,7 +16,7 @@
             //v-tab(style="min-width: initial")
             //  v-icon mdi-circle
             v-tab-item
-              v-card-text(v-text="year.text")
+              v-card-text(v-text="experience.text")
             //v-tab-item
             //  iframe(width="100%" height="315" src="https://www.youtube.com/embed/Jh_-RgkEp2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
           v-card-actions.pa-1
@@ -33,12 +33,12 @@
 export default {
   name: 'IndexPage',
   computed: {
-    getyears() {
-      return this.years.reverse()
+    getExperiences() {
+      return this.experiences.reverse()
     }
   },
   data: () => ({
-    years: [
+    experiences: [
       {
         color: 'green',
         year: 'Avril/Mai 2021',
@@ -149,6 +149,13 @@ export default {
         year: '10/10/2022',
         title: 'Tournoi TKT 3 Keeps',
         icon: 'mdi-controller',
+        text: 'TKT c\'est dans la poche, mais TMTC c\'est pas gagné',
+      },
+      {
+        color: 'purple',
+        year: '11-13/11/2022',
+        title: 'Caritatif event - Téléthon Gaming partie 1',
+        icon: 'mdi-hand-coin',
         text: 'TKT c\'est dans la poche, mais TMTC c\'est pas gagné',
       },
     ],
