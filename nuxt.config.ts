@@ -14,9 +14,15 @@ export default defineNuxtConfig(<NuxtConfig>{
     dirs: [{ path: '~/components' }],
   },
 
+  htmlAttrs: {
+    lang: 'fr',
+  },
+
   css: [
     '~/assets/sass/main.sass',
   ],
+
+  modules: ['nuxt-icon'],
 
   postcss: {
     plugins: {

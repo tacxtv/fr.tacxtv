@@ -1,8 +1,6 @@
 <template lang="pug">
 div
-    index-who-is-tacx
-    index-channel-history
-    index-popular-clips
+    div Planning
 </template>
 
 <script lang="ts">
@@ -13,7 +11,7 @@ export default defineComponent({
   name: 'Index',
   setup() {
     definePageMeta({
-      layout: 'onepage',
+      layout: 'fullscreen',
     })
     return {}
   },

@@ -1,14 +1,12 @@
 <template lang="pug">
-div#hero
+div#navbar
     menu-items.absolute.z-10
-    img.logo.px-6.z-10(src='/logo.png' alt='logo')
-    fog
     wave.wave
 </template>
 
 <style lang="sass">
-#hero
-  height: 80vh
+#navbar
+  height: 160px
   background-position: bottom
   background-size: cover
   display: flex
@@ -20,7 +18,6 @@ div#hero
   .logo
     margin: auto
     max-height: 60%
-    padding-bottom: 92px
 
   .wave
     position: absolute
@@ -34,7 +31,7 @@ div#hero
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Hero',
+  name: 'Navbar',
   setup() {
     return {}
   },
