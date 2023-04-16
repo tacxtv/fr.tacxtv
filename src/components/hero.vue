@@ -1,6 +1,8 @@
 <template lang="pug">
 div#hero
     menu-items.absolute.z-10
+      template(v-slot:right-items)
+        nuxt-link.text-yellow-300(to='https://www.twitch.tv/subs/tacxtv' target="_blank") Nous soutenir
     img.logo.px-6.z-10(src='/logo.png' alt='logo')
     fog
     wave.wave

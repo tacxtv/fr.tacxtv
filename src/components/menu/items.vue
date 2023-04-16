@@ -9,7 +9,9 @@ div.menu-items.flex.gap-8.text-1xl.font-langar.pt-2.px-3.left-0.right-0(class="s
             nuxt-link(to='/faq' class='hover:underline') Les créateurs
           li.inline-block.text-white.no-underline.whitespace-nowrap
             nuxt-link(to='/faq' class='hover:underline') Nos expériences
-    nuxt-link.inline-block.text-white.no-underline.whitespace-nowrap(href='javascript:;' target='_blank' class='hover:underline') Jouer !
+    div(style="margin: auto")
+    slot(name="right-items")
+    //- nuxt-link.inline-block.text-white.no-underline.whitespace-nowrap(href='javascript:;' target='_blank' class='hover:underline') Jouer !
 </template>
 
 <script lang="ts">
